@@ -169,3 +169,21 @@ main {
     color: #888;
     font-size: 0.9rem;
 }
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+}
+
+.image-grid picture {
+    display: block;
+    width: 100%;
+}
+
+.image-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+}
