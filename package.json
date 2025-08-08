@@ -7,7 +7,8 @@
     "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1",
     "images": "node optimize-images.js",
-    "dev": "parcel src/index.html"
+    "dev": "parcel src/index.html",
+    "favicon": "node convert-favicon.js"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +17,7 @@
   "devDependencies": {
     "parcel": "^2.15.4"
   },
+  "browserslist": ["defaults","not IE 11"],
   "dependencies": {
     "sharp": "^0.34.3"
   }

@@ -127,7 +127,25 @@ npm run build</code></pre>
                 <li>Sharp-scriptet gör bildflödet snabbt, jag lägger bara in en originalbild.</li>
                 <li>Simpel och minimal HTML/CSS/JS gör boilerplaten lätt att återanvända i nya projekt.</li>
             </ul>
+
+            <h2>Checklista – verifiering</h2>
+            <ul>
+                <li>Build körd: <code>npm run build</code> (prod-läge).</li>
+                <li>HTML/CSS/JS minifierade i <code>dist/</code> (JS bundlat med hashade filnamn).</li>
+                <li>Transpilering aktiv via Parcel + <code>browserslist</code> (bakåtkompabilitet).</li>
+                <li>Bildoptimering: <code>&lt;picture&gt;</code> med <code>AVIF</code>/<code>WebP</code> + fallback
+                    fungerar.</li>
+                <li>Favicons på plats: <code>favicon.svg</code>, <code>favicon.png</code>, <code>favicon.ico</code>
+                    länkade i <code>&lt;head&gt;</code>.</li>
+                <li>Responsivitet testad (mobil/desktop), kodblock <code>&lt;pre&gt;</code>/<code>&lt;code&gt;</code>
+                    wrappar korrekt.</li>
+                <li>Navigation: <code>.active</code>-klass visar aktuell sida.</li>
+                <li>Git-flöde: arbete i <code>dev</code>, merge till <code>main</code> för release.</li>
+                <li>Deploy: Netlify byggde från <code>main</code> med <code>npm ci</code> + <code>npm run build</code>,
+                    publicerar <code>dist/</code>.</li>
+            </ul>
         </section>
+
     </main>
 
     <footer class="footer">
