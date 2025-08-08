@@ -59,8 +59,10 @@
                 <li><strong>Node.js + npm</strong> för scripts och paket.</li>
                 <li><strong>Parcel</strong> som bundler (dev-server, minifiering, transpilering, cache-busting).
                 </li>
-                <li><strong>Sharp</strong> för att generera <code>.avif</code> och <code>.webp</code> från
-                    originalbilder (JPG/PNG).</li>
+                <li><strong>Sharp</strong> för att generera <code>.avif</code> , <code>.webp</code> samt
+                    <code>.png</code> från
+                    originalbilder (JPG/PNG/SVG).
+                </li>
                 <li><strong>Git/GitHub</strong> för versionshantering och deployment-trigger.</li>
                 <li><strong>Netlify</strong> för hosting av webbplatsen.</li>
             </ul>
@@ -69,7 +71,8 @@
             <p>Kör lokalt under utveckling och vid build/publicering:</p>
             <pre><code>npm run dev     # startar utvecklingsserver (Parcel)
 npm run build   # bygger optimerat till dist/
-npm run images  # genererar .avif och .webp från src/images/*.jpg|png</code></pre>
+npm run images  # genererar .avif och .webp från src/images/*.jpg|png
+npm run favicon  # genererar .png från src/images/*.svg</code></pre>
 
             <h2>Bildoptimering</h2>
             <p>
@@ -83,6 +86,14 @@ npm run images  # genererar .avif och .webp från src/images/*.jpg|png</code></p
   &lt;source srcset="./images/img1.webp" type="image/webp"&gt;
   &lt;img src="./images/img1.jpg" alt="Bild 1" loading="lazy"&gt;
 &lt;/picture&gt;</code></pre>
+
+            <p>
+                Faviconen skapas från en <code>favicon.svg</code> och konverteras till <code>favicon.png</code> med
+                <code>convert-favicon.js</code> via <code>npm run favicon</code>.
+                En <code>.ico</code>-version görs manuellt för äldre webbläsare. Alla tre formaten länkas i
+                <code>&lt;head&gt;</code> på varje sida.
+            </p>
+
 
             <h2>Branching & commits</h2>
             <ul>
