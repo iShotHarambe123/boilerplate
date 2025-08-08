@@ -200,3 +200,37 @@ section {
     border-radius: 4px;
     display: block;
 }
+
+/* <PRE> <CODE> RESPONSIVE STYLES */
+pre {
+    max-width: 100%;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    -webkit-overflow-scrolling: touch;
+
+    background: #f1f1f1;
+    border: 1px solid #e2e2e2;
+    border-radius: 6px;
+    padding: .75rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .9rem;
+    tab-size: 2;
+}
+
+pre>code {
+    white-space: inherit;
+    word-break: inherit;
+    overflow-wrap: inherit;
+}
+
+p code,
+li code {
+    white-space: normal;
+    word-break: break-word;
+    background: #f1f1f1;
+    border: 1px solid #e2e2e2;
+    border-radius: 4px;
+    padding: .05em .35em;
+}
